@@ -1,25 +1,48 @@
-let week = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-let date = new Date();
+let str = 'урок-3-был слишком легким';
+str = str.charAt(0).toUpperCase() + str.slice(1);
+console.log(str);
 
-for (let i = 0; i < week.length; i++) {
-	if (week[i] == 'Суббота' || week[i] == 'Воскресенье') {
-		document.write("<p style='font-weight: bold;'>" + week[i] + "</p>");
-	} else if (i == date.getDay()) {
-		document.write("<p style='font-style: italic;'>" + week[i] + "</p>");
+console.log('---------------------------------------');
+
+console.log(str.replace('-',' ') + ' - Не пойдет, после 3 есть символ -');
+
+console.log('---------------------------------------');
+
+let str2 = '';
+for (let i = 0; i < str.length; i++) {
+	//console.log(str.charAt(i));
+	if (str.charAt(i) == '-') {
+		str2 += ' ';
 	} else {
-		document.write("<p>" + week[i] + "</p>");
-	};
+		str2 += str.charAt(i);
+	}
 };
+str = str2;
+console.log(str);
 
-/***************************************************/
+console.log('---------------------------------------');
 
-let arr = ['37','12','22','73'];
+str = str.replace('легким',' ');
+console.log(str);
 
-for (let i = 0 ; i < arr.length; i++) {
-	if (arr[i].charAt(0) == '3' ||  arr[i].charAt(0) == '7') {
-		console.log(arr[i]);
-	};
-};
+console.log('---------------------------------------');
+
+str = str.replace(str.slice(-3),'о');
+console.log(str);
+
+console.log('---------------------------------------');
+
+let arr = [20, 33, 1, 'Человек', 2, 3];
+let a = 0;
+
+for (let i = 0; i < arr.length; i++) {
+	if (typeof(arr[i]) !== 'string') {
+		a += arr[i];
+	}
+}; 
+console.log(Math.sqrt(a));
+
+console.log('---------------------------------------');
 
 
 

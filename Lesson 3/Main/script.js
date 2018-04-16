@@ -1,15 +1,14 @@
-
 let money,
-	name,
-	time,
-	price
+		name,
+		time,
+   	price;
 
 
 
 function start() {
 	money = prompt('Ваш бюджет?', '0');
 
-	while (isNaN(money) || money == "" || money == null) {
+	while (isNaN(money) || money == '' || money == null) {
 		money = prompt('Ваш бюджет?');
 	}
 	
@@ -35,7 +34,7 @@ function chooseGoods() {
 			console.log('Все верно!');
 			mainList.shopGoods[i] = a; 
 		} else {
-			i = i - 1;
+			i -= 1;
 		}
 	}
 }
@@ -51,7 +50,8 @@ function workTime(time) {
 	} else {
 		console.log('В сутках только 24 часа');
 	}
-};
+}
+workTime();
 
 function budgetOneDay() {
 	alert('Ваш бюджет на 1 день составляет: ' + (mainList.budget / 30).toFixed(2));
@@ -60,7 +60,7 @@ budgetOneDay();
 
 function discountSystem(price) {
  	if (mainList.discount == true) {
- 		price *= 0.8
+ 		price *= 0.8;
  		console.log(price);
  	}
 } 
@@ -81,9 +81,9 @@ headHunter();
 
 /*-------------------------------------------------------*/
 console.log(mainList);
-console.log('------------------------')
+console.log('------------------------');
 console.log(mainList.shopGoods);
-console.log('------------------------')
-console.log(mainList.employers)
+console.log('------------------------');
+console.log(mainList.employers);
 
 

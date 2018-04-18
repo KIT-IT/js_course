@@ -70,19 +70,36 @@ let mainList = {
 		}
 	},
 	chooseShopItem: function chooseShopItem() {
+		
+		
 		let items = prompt('Перечислите товары', '');
-
-		mainList.shopItems = items.split(',');
+		if ((typeof(items)) === 'string' && typeof(items) != null && items != '') {
+			console.log('Все верно!');
+			mainList.shopItems = items.split(',');
+		}
+		
 		mainList.shopItems.push(prompt('Подождите еще', ''));
-
 		mainList.shopItems.sort();
+
+		mainList.shopItems.forEach( function(element, index) {
+			alert('У нас вы можете купить: ' + (index + 1) + '. ' + element);
+		});
+
+		for (key in mainList.shopItems) {
+			console.log('Наш магазин включает в себя: ' + mainList.shopItems[key]);
+		}; 
 	}
 };
+
 
 
 /*-------------------------------------------------------*/
 
 console.log(mainList);
+
+/*-------------------------------------------------------*/
+
+
 
 
 

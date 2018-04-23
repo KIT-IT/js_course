@@ -1,6 +1,6 @@
 let money,
-		name,
-		time,
+	name,
+	time,
    	price;
 
 

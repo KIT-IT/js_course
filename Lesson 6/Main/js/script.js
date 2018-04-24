@@ -89,6 +89,8 @@ hireEmployersBtn.addEventListener('click', () => {
 	}
 });
 
+
+
 let mainList = {
 	budget: money,
 	shopName: name,
